@@ -173,6 +173,14 @@ if not application.debug:
    file_handler.setLevel(logging.WARNING)
    application.logger.addHandler(file_handler)
 ```
+Add `.htacces` in to the `.git` directory  
+```bash
+.htaccess
+------------------
+Order allow,deny
+Deny from all
+
+```
 
 url of the application  
 http://ec2-52-24-182-116.us-west-2.compute.amazonaws.com/
