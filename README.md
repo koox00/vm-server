@@ -181,6 +181,7 @@ Order allow,deny
 Deny from all
 
 ```
+Subscribed and setup newrelic to minitor the server.
 
 url of the application  
 http://ec2-52-24-182-116.us-west-2.compute.amazonaws.com/
