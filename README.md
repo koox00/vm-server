@@ -88,7 +88,6 @@ pip install virtualenv
 
 ### Postgres config
 
-see this [post][1].
 
 ```bash
 # login as postgres user
