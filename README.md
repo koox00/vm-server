@@ -181,9 +181,9 @@ Order allow,deny
 Deny from all
 
 ```
-Subscribed and setup newrelic to minitor the server.
+Subscribed and setup newrelic to monitor the server.
 
-url of the application  
+Url of the application  
 http://ec2-52-24-182-116.us-west-2.compute.amazonaws.com/
 
 vms ip `52.24.182.116` port `2200`
