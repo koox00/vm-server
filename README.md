@@ -109,13 +109,17 @@ RESET ROLE;
 GRANT access_catalog TO login_catalog;
 ```
 
-edit postgresql access  
-- add this line to `/etc/postgresql/9.3/main/pg_hba.conf`  
+edit postgresql access,  
+
+
+file: `/etc/postgresql/9.3/main/pg_hba.conf`  
+
+- add this line.
 ```bash
 # TYPE   DATABASE            USER              ADDRESS              METHOD
 local    catalog             catalog                                md5
 ```
-- ensure remote connections aren't allowed.
+- ensure remote connections aren't allowed (look for type and address).
 
 ### Apache config
 
