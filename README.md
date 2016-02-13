@@ -180,5 +180,5 @@ vms ip `52.24.182.116` port `2200`
 
 
 - securing postgresql https://www.digitalocean.com/community/tutorials/how-to-secure-postgresql-on-an-ubuntu-vps
-- ufw firewall https://wiki.archlinux.org/index.php/Uncomplicated_Firewall Flask deploy
+- ufw firewall https://wiki.archlinux.org/index.php/Uncomplicated_Firewall
 - flask deployment http://flask.pocoo.org/docs/0.10/deploying/
