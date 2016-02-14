@@ -75,6 +75,26 @@ finally enable firewall
 $ sudo ufw enable
 ```
 
+#### Install fail2ban
+
+>Fail2Ban scans log files like /var/log/auth.log and bans IP addresses having too many failed login attempts. It does this by updating system firewall rules to reject new connections from those IP addresses, for a configurable amount of time. Fail2Ban comes out-of-the-box ready to read many standard log files, such as those for sshd and Apache, and is easy to configure to read any log file you choose, for any error you choose.
+
+
+
+```bash
+tar xvfj fail2ban-0.9.3.tar.bz2
+cd fail2ban-0.9.3
+python setup.py install
+```
+start service
+
+```bash
+cp files/debian-initd /etc/init.d/fail2ban
+update-rc.d fail2ban defaults
+service fail2ban start
+```
+
+
 ### Install necessary programs
 
 ```bash
@@ -183,3 +203,4 @@ vms ip `52.24.182.116` port `2200`
 - https://www.digitalocean.com/community/tutorials/how-to-secure-postgresql-on-an-ubuntu-vps UFW
 - ufw firewall https://wiki.archlinux.org/index.php/Uncomplicated_Firewall Flask deploy
 - flask deployment http://flask.pocoo.org/docs/0.10/deploying/
+- fail2ban https://github.com/fail2ban/fail2ban
