@@ -108,7 +108,6 @@ pip install virtualenv
 
 ### Postgres config
 
-see this [post][1].
 
 ```bash
 # login as postgres user
@@ -130,13 +129,17 @@ RESET ROLE;
 GRANT access_catalog TO login_catalog;
 ```
 
-edit postgresql access  
-- add this line to `/etc/postgresql/9.3/main/pg_hba.conf`  
+edit postgresql access,  
+
+
+file: `/etc/postgresql/9.3/main/pg_hba.conf`  
+
+- add this line.
 ```bash
 # TYPE   DATABASE            USER              ADDRESS              METHOD
 local    catalog             catalog                                md5
 ```
-- ensure remote connections aren't allowed.
+- ensure remote connections aren't allowed (look for type and address).
 
 ### Apache config
 
@@ -190,17 +193,32 @@ if not application.debug:
    file_handler.setLevel(logging.WARNING)
    application.logger.addHandler(file_handler)
 ```
+Add `.htacces` in to the `.git` directory  
+```bash
+.htaccess
+------------------
+Order allow,deny
+Deny from all
 
-url of the application  
+```
+
+### Server monitoring
+
+Subscribed and setup newrelic on the vm to monitor the server.
+
+Installed glances, curses-based system monitoring tool.
+
+Url of the application  
 http://ec2-52-24-182-116.us-west-2.compute.amazonaws.com/
 
+### access
 vms ip `52.24.182.116` port `2200`
 
 ### resources:
 
 
-- securing postgresql
-- https://www.digitalocean.com/community/tutorials/how-to-secure-postgresql-on-an-ubuntu-vps UFW
-- ufw firewall https://wiki.archlinux.org/index.php/Uncomplicated_Firewall Flask deploy
+- securing postgresql https://www.digitalocean.com/community/tutorials/how-to-secure-postgresql-on-an-ubuntu-vps
+- ufw firewall https://wiki.archlinux.org/index.php/Uncomplicated_Firewall
 - flask deployment http://flask.pocoo.org/docs/0.10/deploying/
 - fail2ban https://github.com/fail2ban/fail2ban
+- server monitoring http://newrelic.com/server-monitoring, http://glances.readthedocs.org/en/latest/index.html
