@@ -123,10 +123,10 @@ CREATE ROLE access_catalog;
 CREATE DATABASE catalog WITH OWNER access_catalog;
 \c catalog
 REVOKE ALL ON SCHEMA public FROM public;
-GRANT ALL ON SCHEMA public TO access_role;
+GRANT ALL ON SCHEMA public TO access_catalog;
 RESET ROLE;
 -- give catalog db access to role catalog
-GRANT access_catalog TO login_catalog;
+GRANT access_catalog TO catalog;
 ```
 
 edit postgresql access,  
@@ -209,10 +209,10 @@ Subscribed and setup newrelic on the vm to monitor the server.
 Installed glances, curses-based system monitoring tool.
 
 Url of the application  
-http://ec2-52-24-182-116.us-west-2.compute.amazonaws.com/
+http://ec2-52-36-112-116.us-west-2.compute.amazonaws.com/
 
 ### access
-vms ip `52.24.182.116` port `2200`
+vms ip `52.36.112.116` port `2200`
 
 ### resources:
 
