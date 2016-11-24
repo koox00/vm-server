@@ -208,11 +208,11 @@ Subscribed and setup newrelic on the vm to monitor the server.
 
 Installed glances, curses-based system monitoring tool.
 
-Url of the application (appication not online)
+Url of the application (appication not online)  
 ~~http://ec2-52-36-112-116.us-west-2.compute.amazonaws.com/~~
 
 ### access
-vms ip `52.36.112.116` port `2200`
+server ip `52.36.112.116` port `2200`
 
 ### resources:
 
