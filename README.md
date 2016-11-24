@@ -212,7 +212,7 @@ Url of the application (appication not online)
 ~~http://ec2-52-36-112-116.us-west-2.compute.amazonaws.com/~~
 
 ### access
-server ip `52.36.112.116` port `2200`
+~~server ip `52.36.112.116` port `2200`~~
 
 ### resources:
 
